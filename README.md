@@ -1,5 +1,7 @@
 # superagent-playground
 
+简体中文 | [English](README.en.md)
+
 一个用于测试 superagent 的仓库，附带一个用原生 HTML / CSS / JavaScript 实现的贪吃蛇小游戏。
 
 ![贪吃蛇游戏截图](docs/screenshots/gameplay.jpg)
