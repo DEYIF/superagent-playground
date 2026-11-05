@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="一个无需安装依赖、打开浏览器就能玩的贪吃蛇小游戏。"
+    />
+    <title>贪吃蛇 · superagent-playground</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%90%8D%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <p class="eyebrow">superagent-playground</p>
+        <h1>贪吃蛇</h1>
+        <p class="subtitle">吃掉苹果，别撞墙，也别咬到自己。</p>
+      </header>
+
+      <section class="game-card" aria-label="贪吃蛇游戏">
+        <div class="hud">
+          <div class="stat">
+            <span class="stat-label">得分</span>
+            <span id="score" class="stat-value score-value">0</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">最高分</span>
+            <span id="best" class="stat-value">0</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">等级</span>
+            <span id="level" class="stat-value">1</span>
+          </div>
+          <button
+            id="pause-btn"
+            class="icon-btn"
+            type="button"
+            aria-label="暂停游戏"
+            title="暂停 (空格)"
+            disabled
+          >
+            Ⅱ
+          </button>
+        </div>
+
+        <div class="board-wrap">
+          <canvas
+            id="board"
+            width="600"
+            height="600"
+            aria-label="贪吃蛇棋盘"
+            role="img"
+          ></canvas>
+
+          <div id="overlay" class="overlay" aria-live="polite">
+            <div class="overlay-card">
+              <p id="overlay-kicker" class="overlay-kicker">准备好了吗？</p>
+              <h2 id="overlay-title" class="overlay-title">贪吃蛇</h2>
+              <p id="overlay-text" class="overlay-text">
+                吃掉苹果，别撞墙，也别咬到自己。
+              </p>
+              <button id="primary-btn" class="primary-btn" type="button">
+                开始游戏
+              </button>
+              <p id="overlay-hint" class="overlay-hint">
+                按 <kbd>Enter</kbd> 开始
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="dpad" aria-label="触屏方向控制">
+          <button
+            class="dpad-btn"
+            type="button"
+            data-direction="up"
+            aria-label="向上"
+          >
+            ▲
+          </button>
+          <button
+            class="dpad-btn"
+            type="button"
+            data-direction="left"
+            aria-label="向左"
+          >
+            ◀
+          </button>
+          <button
+            class="dpad-btn"
+            type="button"
+            data-direction="down"
+            aria-label="向下"
+          >
+            ▼
+          </button>
+          <button
+            class="dpad-btn"
+            type="button"
+            data-direction="right"
+            aria-label="向右"
+          >
+            ▶
+          </button>
+        </div>
+
+        <footer class="hints">
+          <p>
+            <kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd> 或
+            <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> 移动
+          </p>
+          <p><kbd>空格</kbd> 暂停 · <kbd>Enter</kbd> 开始 / 重开</p>
+        </footer>
+      </section>
+
+      <p class="footnote">纯前端实现 · 无需安装依赖 · 最高分自动保存在本地</p>
+    </main>
+
+    <script src="js/snake-core.js"></script>
+    <script src="js/game.js"></script>
+  </body>
+</html>
