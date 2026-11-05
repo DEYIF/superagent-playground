@@ -2,7 +2,7 @@
 
 一个用于测试 superagent 的仓库，附带一个用原生 HTML / CSS / JavaScript 实现的贪吃蛇小游戏。
 
-![贪吃蛇游戏截图](docs/screenshots/gameplay.png)
+![贪吃蛇游戏截图](docs/screenshots/gameplay.jpg)
 
 ## 快速开始
 
